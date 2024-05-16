@@ -8,8 +8,7 @@ Leer el Artista, Vicent Van Gogh con id=4
 
 Actualizar el Artista Frida Kahlo
  
- ![image](https://github.com/VivianaCuaspa/maui_app_artists_artworks/assets/119900830/8c00aeaf-ed3f-48b8-b34a-04a37f129d58)
-
+![image](https://github.com/VivianaCuaspa/maui_app_artists_artworks/assets/119900830/323654aa-0678-4074-a98d-e4de28bab7c1)
 
 ![image](https://github.com/VivianaCuaspa/maui_app_artists_artworks/assets/119900830/abfbcd58-10d7-429f-ac26-8d6d4a6dddc4)
 
