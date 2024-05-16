@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppApiArtists.MainPage">
+
+    <ContentPage.Resources>
+        <Style x:Key="MainLabel" TargetType="Label">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="TextColor" Value="DarkBlue"/>
+        </Style>
+        <Style x:Key="PrimaryButton" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="#6200EE"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="CornerRadius" Value="20"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="Padding" Value="5,3"/>
+            <Setter Property="FontSize" Value="12"/>
+        </Style>
+        <Style x:Key="SecondaryButton" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="Gray"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="CornerRadius" Value="20"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="Padding" Value="5,3"/>
+            <Setter Property="FontSize" Value="12"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <StackLayout Spacing="20" Padding="20">
+            <!-- Sección de Artistas -->
+            <Frame CornerRadius="20" Padding="20" Margin="10" BackgroundColor="#E3F2FD">
+                <StackLayout>
+                    <Label Text="Artistas" FontAttributes="Bold" HorizontalOptions="Center" Style="{StaticResource MainLabel}"/>
+                    <Label Text="Id Artista:"/>
+                    <Entry x:Name="txtId" Placeholder="Ingrese Id del Artista"/>
+                    <Label Text="Nombre:"/>
+                    <Entry x:Name="txtName" Placeholder="Ingrese Nombre del Artista"/>
+                    <Label Text="Apellido:"/>
+                    <Entry x:Name="txtLastName" Placeholder="Ingrese Apellido del Artista"/>
+                    <Label Text="Nacionalidad:"/>
+                    <Entry x:Name="txtNationality" Placeholder="Ingrese Nacionalidad"/>
+                    <Label Text="Fecha de Nacimiento:"/>
+                    <Entry x:Name="txtBirthDate" Placeholder="Ingrese Fecha de Nacimiento"/>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="10">
+                        <Button x:Name="cmdCreate" Text="INSERTAR" Clicked="cmdCreate_Clicked" Style="{StaticResource PrimaryButton}"/>
+                        <Button x:Name="cmdRead" Text="LEER" Clicked="cmdRead_Clicked" Style="{StaticResource SecondaryButton}"/>
+                        <Button x:Name="cmdUpdate" Text="ACTUALIZAR" Clicked="cmdUpdate_Clicked" Style="{StaticResource PrimaryButton}"/>
+                        <Button x:Name="cmdDelete" Text="BORRAR" Clicked="cmdDelete_Clicked" Style="{StaticResource SecondaryButton}"/>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+
+            <!-- Sección de Obras -->
+            <Frame CornerRadius="20" Padding="20" Margin="10" BackgroundColor="#FFF3E0">
+                <StackLayout>
+                    <Label Text="Obras" FontAttributes="Bold" HorizontalOptions="Center" Style="{StaticResource MainLabel}"/>
+                    <Label Text="Id Obra:"/>
+                    <Entry x:Name="txtArtworkId" Placeholder="Ingrese Id de la Obra"/>
+                    <Label Text="Nombre:"/>
+                    <Entry x:Name="txtArtworkName" Placeholder="Ingrese Nombre de la Obra"/>
+                    <Label Text="Año de Publicación:"/>
+                    <Entry x:Name="txtPublicationYear" Placeholder="Ingrese Año de Publicación"/>
+                    <Label Text="Técnica:"/>
+                    <Entry x:Name="txtTechnique" Placeholder="Ingrese Técnica"/>
+                    <Label Text="Descripción:"/>
+                    <Entry x:Name="txtDescription" Placeholder="Ingrese Descripción"/>
+                    <Label Text="Id Artista:"/>
+                    <Entry x:Name="txtArtistId" Placeholder="Ingrese Id del Artista"/>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="10">
+                        <Button x:Name="cmdCreateArtwork" Text="INSERTAR" Clicked="cmdCreateArtwork_Clicked" Style="{StaticResource PrimaryButton}"/>
+                        <Button x:Name="cmdReadArtwork" Text="LEER" Clicked="cmdReadArtwork_Clicked" Style="{StaticResource SecondaryButton}"/>
+                        <Button x:Name="cmdUpdateArtwork" Text="ACTUALIZAR" Clicked="cmdUpdateArtwork_Clicked" Style="{StaticResource PrimaryButton}"/>
+                        <Button x:Name="cmdDeleteArtwork" Text="BORRAR" Clicked="cmdDeleteArtwork_Clicked" Style="{StaticResource SecondaryButton}"/>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
